@@ -8,7 +8,8 @@
 <script src="build/aframe-ar.js"></script>
 
 <!-- particles system component -->
-<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+<script
+    src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
 
 <!-- speech command component -->
 <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
@@ -16,21 +17,30 @@
 
 
 <body style="margin : 0px; overflow: hidden;">
-    <a-scene vr-mode-ui="enabled: false;"
-             renderer="logarithmicDepthBuffer: true;"
-             embedded
-             arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
-        <a-entity speech-command="command: start; type: attribute; targetElement: #image-360; attribute: src; value: #start;">
+    <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
+        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+
+        <a-entity id="annyang" annyang-speech-recognition></a-entity>
+
+        <a-entity id="speech command"
+            speech-command__show="command: start stars; type: attribute; attribute: visible; targetElement: #stars; value: true;"
+            speech-command__hide="command: stop stars; type: attribute; attribute: visible; targetElement: #stars; value: false;">
+
         </a-entity>
 
-        <a-entity speech-command="command: stop; type: function; targetElement: #cursor; targetComponent: teleporter; function: teleport; keyCode: 13"></a-entity>
-
-        <a-entity position="0 2.25 -15" particle-system="preset: snow"></a-entity>
+        <a-entity id="stars" position="0 6 -20" particle-system="preset: default"></a-entity> 
 
         <a-marker preset="hiro">
-            <a-entity id="box" geometry="primitive: box; width: 0.4; depth: 0.4; height: 0.4" position="-0.6 -0.4 0.1" material="color:#4CC3D9"></a-entity>
-            <a-entity id="cylinder" geometry="primitive: cylinder; width: 0.5; depth: 0.3; height: 1.6" position="1 0.75 1" material="color: #FFC65D"></a-entity>
-            <a-entity id="sphere" geometry="primitive: shere; width: 0.05; depth: 0.7; height: 0.5" position="0 1.25 -1" material="color: #EF2D5E"></a-entity>
+
+
+            <a-entity id="box" geometry="primitive: box; width: 0.4; depth: 0.4; height: 0.4" position="-0.6 -0.4 0.1"
+                material="color: #4CC3D9"></a-entity>
+            <a-entity id="cylinder" geometry="primitive: cylinder; width: 0.5; depth: 0.3 height: 1.6" position="1 0.75 1"
+                material="color: #FFC65D"></a-entity>
+            <a-entity id="sphere" geometry="primitive: sphere; width: 0.05; depth: 0.7; height: 0.5" position="0 1.25 -1"
+                material="color: #EF2D5E"></a-entity>
+
+
 
         </a-marker>
 
@@ -38,4 +48,5 @@
 
     </a-scene>
 </body>
+
 </html>
