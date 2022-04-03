@@ -1,9 +1,9 @@
 # Lesson: Interaction Design
 
-### First and Last Name: xxx
-### University Registration Number: dpsdxxxxx
-### GitHub Personal Profile: xxx
-### Augmented Reality Personal Repository: xxx
+### First and Last Name: Dimitris Ioannis Kamperakis
+### University Registration Number: dpsd19044
+### GitHub Personal Profile: https://github.com/dpsd19044
+### Augmented Reality Personal Repository: dpsd19044.github.io/augmented-reality/
 
 # Introduction
 
@@ -11,6 +11,23 @@
 
 
 # 1st Deliverable
+Αρχικά διάβασα το "Developing Interactive Augmented Reality Applications" έκανα fork Την εργασία και κατεάβασα τα :  Github Desktop, Αtom, Python και το σύνολο των αρχείων που είναι ανεβασμένα για τη συγκεκριμένη εργασία.
+Άνοιξα στο marker based το Index.html μεσω του visual studio και ξεκίνησα την επεξεργασία του κώδικα.
+
+
+Αντιμετώπησα πολλα προβλήματα αφου κατέβασα την python με τα βήματα που είναι ανεβασμένα στο site και για αυτό χρησιμοποίησα την Python από άλλο υπολογιστή κανονικά και συνέχισα την εργασία ανοίγωντας απλώς το λινκ μου dpsd19044.github.io/augmented-reality/ το οποίο το τοποθέτησσα ακολουθώντας καταγράμμα τις οδηγίες που έχετ ανεβάσει
+
+
+Εν τέλει συνέχισα την επεξεργαζασία στο index.html ( https://github.com/dpsd19044/Augmented-Reality/blob/main/marker_based/index.html ) πατώντας το edit this file.
+
+Ξεκίνησα με την τοποθέτηση του κυλίνδρου και της σφάιρας τα οποια και βρήκα στο A-Frame και τα προσάρμοσα ετσι ώστε να δημιουργηθεί ένα περιβάλλον ώστε να φαίνονται και τα 3 σχήματα.
+Μετά έβαλα το χιόνι και αφου κατάλαβα πως μπαίνει αποφασισα να βάλλω τα "satrs" γιατί μου φάνηκαν αρκετά ενδιαφέρον (χιχι)
+Τέλος έβαλλα την φωνειτική εντολή από το ίδιο σαιτ.
+
+
+Γενικά αντιμετώπισα αρκετά προβληματάκια συνεχώς και για αυτό παρατηρούσα και άλλες εργασίες που είχαν ηδη ανέβει γιατι παρόλο που είχα βάλλει όλοκληρο τον απαραίτητο κώδικα δεν λειτουργούσε λόγω λάθος τοποθέτησης του κωδικα στη σειρα κυρίως.
+
+*Επίσης στο λάπτοπ μου φαινόντουσαν μονο τα αστεράκια και υπήρχε η αλληλεπίδραση του start/stop αλλα δεν διαβαζόταν το "hiro" και για αυτο χρησιμοποιήσα άλλον υπολογστή για να δω το αποτέλσμα. Την τελευταία μέρα που έκανα μερικες μικροαλλαγές και χρησιμοποιούσα το λάπτοπ μου δεν έβλεπα τα σχήματα αλλα μονο τα αστέρια, ελπίζω να φαίνονται κανονικά.
 
 
 # 2nd Deliverable
