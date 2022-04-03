@@ -3,7 +3,7 @@
 ### First and Last Name: Dimitris Ioannis Kamperakis
 ### University Registration Number: dpsd19044
 ### GitHub Personal Profile: https://github.com/dpsd19044
-### Augmented Reality Personal Repository: dpsd19044.github.io/augmented-reality/
+### Augmented Reality Personal Repository: https://dpsd19044.github.io/Augmented-Reality/
 
 # Introduction
 
