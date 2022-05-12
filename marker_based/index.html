@@ -1,3 +1,4 @@
+<1_DELIVERABLE> 
 <!DOCTYPE html>
 <html>
 <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
@@ -47,6 +48,111 @@
         <a-entity camera></a-entity>
 
     </a-scene>
+</body>
+
+</html>
+
+<2_DELIVERABLE>  
+<!DOCTYPE html>
+<html>
+<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+<!-- we import arjs version without NFT but with marker + location based support -->
+<!--<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>-->
+<script src="build/aframe-ar.js"></script>
+
+<!-- particles system component -->
+<script
+    src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+
+<!-- speech command component -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+<script src="build/aframe-speech-command-component.js"></script>
+
+
+<body style="margin : 0px; overflow: hidden;">
+    <script>
+
+        AFRAME.registerComponent("distance",
+            {
+                init: function () {
+                    this.H2Oatom = document.querySelector("#H2Oatom")
+                    this.markerH = document.querySelector("#Hatom")
+                    this.markerO = document.querySelector("#Oatom")
+                },
+
+                tick: function () {
+
+                    var markerHPos, markerOPos, dist
+                    markerHPos = new THREE.Vector3();
+                    this.markerH.object3D.getWorldPosition(markerHPos);
+
+                    markerOPos = new THREE.Vector3();
+                    this.markerO.object3D.getWorldPosition(markerOPos);
+                    dist = markerHPos.distanceTo(markerOPos);
+
+                    if (dist < 2) {
+                        this.H2Oatom.setAttribute("visible", true)
+                        this.Hatom.setAttribute("visible", false)
+                        this.Oatom.setAttribute("visible", false)
+                    }
+                    else {
+                        this.H20.setAttribute("visible", false)
+                        this.Hatom.setAttribute("visible", true)
+                        this.Oatom.setAttribute("visible", true)
+                    }
+                }
+            });
+
+    </script>
+
+
+
+
+    <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
+        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+
+        <a-assets>
+
+            <a-asset-item id="Hatom" src="assets/dpsd19015.H.atom.gltf"></a-asset-item>
+            <a-asset-item id="Oatom" src="assets/dpsd19015-O-Atom.gltf"></a-asset-item>
+            <a-asset-item id="H2Oatom" src="assets/dpsd19015-H2O.gltf"></a-asset-item>
+
+
+        </a-assets>
+
+
+        <a-marker type='pattern' url='assets/pattern-dpsd19015.patt'>
+
+            <a-text value="Galani Christina" color="#008080" position="-.5 1 -1" rotation="-450 0 0"></a-text>
+            <a-image src="assets/galani.png" rotation="-450 0 0" width="1.5" height="3" position="-1.5 1 -1"></a-image>
+
+        </a-marker>
+
+
+        <a-marker type='pattern' url='assets/pattern-card-H.patt'>
+            <a-entity gltf-model="#Hatom"
+                animation__rotate="property: rotation; dur: 5000; easing: linear; dir: normal; from:180 0 0; to: 180 360 0; loop: true;">
+            </a-entity>
+        </a-marker>
+
+
+
+        <a-marker type='pattern' url='assets/pattern-card-O.patt'>
+            <a-entity gltf-model="#Oatom"
+                animation__rotate="property: rotation; dur: 5000; easing: linear; dir: normal; from:180 0 0; to: 180 360 0; loop: true;">
+            </a-entity>
+        </a-marker>
+
+
+
+
+        <a-entity camera></a-entity>
+    </a-scene>
+
+    </a-marker>
+
+
+    </a-entity>
 </body>
 
 </html>
