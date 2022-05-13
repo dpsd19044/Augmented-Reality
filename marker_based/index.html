@@ -1,4 +1,5 @@
-<1_DELIVERABLE> 
+--01_DELIVERABLE-- 
+
 <!DOCTYPE html>
 <html>
 <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
@@ -52,7 +53,8 @@
 
 </html>
 
-<2_DELIVERABLE>  
+--02_DELIVERABLE-- 
+
 <!DOCTYPE html>
 <html>
 <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
@@ -74,13 +76,15 @@
 
         AFRAME.registerComponent("distance",
             {
-                init: function () {
+                init: function () 
+            {
                     this.H2Oatom = document.querySelector("#H2Oatom")
                     this.markerH = document.querySelector("#Hatom")
                     this.markerO = document.querySelector("#Oatom")
-                },
+             },
 
-                tick: function () {
+                tick: function () 
+            {
 
                     var markerHPos, markerOPos, dist
                     markerHPos = new THREE.Vector3();
@@ -90,12 +94,14 @@
                     this.markerO.object3D.getWorldPosition(markerOPos);
                     dist = markerHPos.distanceTo(markerOPos);
 
-                    if (dist < 2) {
+                    if (dist < 2) 
+                    {
                         this.H2Oatom.setAttribute("visible", true)
                         this.Hatom.setAttribute("visible", false)
                         this.Oatom.setAttribute("visible", false)
                     }
-                    else {
+                    else 
+                    {
                         this.H20.setAttribute("visible", false)
                         this.Hatom.setAttribute("visible", true)
                         this.Oatom.setAttribute("visible", true)
@@ -106,30 +112,28 @@
     </script>
 
 
-
-
     <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
         <a-assets>
 
-            <a-asset-item id="Hatom" src="assets/dpsd19015.H.atom.gltf"></a-asset-item>
-            <a-asset-item id="Oatom" src="assets/dpsd19015-O-Atom.gltf"></a-asset-item>
-            <a-asset-item id="H2Oatom" src="assets/dpsd19015-H2O.gltf"></a-asset-item>
+            <a-asset-item id="Hatom" src="assets/Hydrogen.gltf"></a-asset-item>
+            <a-asset-item id="Oatom" src="assets/oxygen.gltf"></a-asset-item>
+            <a-asset-item id="H2Oatom" src="assets/H2O_molecule.gltf"></a-asset-item>
 
 
         </a-assets>
 
 
-        <a-marker type='pattern' url='assets/pattern-dpsd19015.patt'>
+        <a-marker type='pattern' url='pattern-Dpsd19044.patt'>
 
-            <a-text value="Galani Christina" color="#008080" position="-.5 1 -1" rotation="-450 0 0"></a-text>
-            <a-image src="assets/galani.png" rotation="-450 0 0" width="1.5" height="3" position="-1.5 1 -1"></a-image>
+            <a-text value="Kamperakis Dimitris Ioannis" color="#008080" position="-.5 1 -1" rotation="-450 0 0"></a-text>
+            <a-image src="assets/dpsd19044_kamperakis_me.png" rotation="-450 0 0" width="1.5" height="3" position="-1.5 1 -1"></a-image>
 
         </a-marker>
 
 
-        <a-marker type='pattern' url='assets/pattern-card-H.patt'>
+        <a-marker type='pattern' url='assets/pattern-H.patt'>
             <a-entity gltf-model="#Hatom"
                 animation__rotate="property: rotation; dur: 5000; easing: linear; dir: normal; from:180 0 0; to: 180 360 0; loop: true;">
             </a-entity>
@@ -137,7 +141,7 @@
 
 
 
-        <a-marker type='pattern' url='assets/pattern-card-O.patt'>
+        <a-marker type='pattern' url='assets/pattern-O.patt'>
             <a-entity gltf-model="#Oatom"
                 animation__rotate="property: rotation; dur: 5000; easing: linear; dir: normal; from:180 0 0; to: 180 360 0; loop: true;">
             </a-entity>
