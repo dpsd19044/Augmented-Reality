@@ -35,6 +35,7 @@
 
 
 Έφτιαξα κάθε ένα animation. 
+
 Αν και τα 3d-animation --> oxygen.gltf δεν κηνούταν σωστά το συνολικά και στο waterball.gltf δεν εμφανίζεται το render. Και εκεί το έχασα ...
 
 
