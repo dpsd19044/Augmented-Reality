@@ -1,25 +1,28 @@
---02_DELIVERABLE-- 
-
 <!DOCTYPE html>
+
 <html>
-<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
-<!-- we import arjs version without NFT but with marker + location based support -->
-<!--<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>-->
-<script src="build/aframe-ar.js"></script>
 
-<!-- particles system component -->
-<script
-    src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+<head>
+    
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <!--<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>-->
+    <script src="build/aframe-ar.js"></script>
 
-<!-- speech command component -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
-<script src="build/aframe-speech-command-component.js"></script>
+    <!-- particles system component -->
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
 
+    <!-- speech command component -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
+    <script src="build/aframe-speech-command-component.js"></script>
+    
+ </head>
+    
+    <body>
 
-<body style="margin : 0px; overflow: hidden;">
     <script>
 
-        AFRAME.registerComponent("distance",
+        AFRAME.registerComponent("marker-distance",
             {
                 init: function () 
             {
@@ -57,24 +60,28 @@
     </script>
 
 
-    <a-scene vr-mode-ui="enabled: false;" renderer="logarithmicDepthBuffer: true;" embedded
-        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+    <a-scene vr-mode-ui="enabled: false;" 
+             renderer="logarithmicDepthBuffer: true;" 
+             embedded
+            arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
 
         <a-assets>
-
             <a-asset-item id="Hatom" src="assets/Hydrogen.gltf"></a-asset-item>
-            <a-asset-item id="Oatom" src="assets/oxygen.gltf"></a-asset-item>
-            <a-asset-item id="H2Oatom" src="assets/H2O_molecule.gltf"></a-asset-item>
-
-
         </a-assets>
+        
+        <a-assets>
+            <a-asset-item id="Oatom" src="assets/oxygen.gltf"></a-asset-item>
+        </a-assets>
+            
+         <a-assets>
+            <a-asset-item id="H2Oatom" src="assets/H2O_molecule.gltf"></a-asset-item>
+         </a-assets>
+        
 
-
+        <!--DPSD Marker-->
         <a-marker type='pattern' url='pattern-Dpsd19044.patt'>
-
             <a-text value="Kamperakis Dimitris Ioannis" color="#008080" position="-.5 1 -1" rotation="-450 0 0"></a-text>
             <a-image src="assets/dpsd19044_kamperakis_me.png" rotation="-450 0 0" width="1.5" height="3" position="-1.5 1 -1"></a-image>
-
         </a-marker>
 
 
