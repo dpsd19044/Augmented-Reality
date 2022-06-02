@@ -7,26 +7,57 @@
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>-->
     <script src='build/aframe-ar-nft.js'></script>
+	
+    <script>
+
+        AFRAME.registerComponent("text-show", {
+            init: function () {
+                let toggle = false
+                this.el.addEventListener("click", (e) => {
+                    let entity = document.querySelectorAll(".clickable")
+                    entity.forEach(function (el) {
+                        el.setAttribute("visible", toggle)
+                    })
+                    toggle = !toggle
+                })
+            }
+        })
+    </script>	
 </head>
 
 
 <body style='margin: 0; overflow: hidden;'>
-    <a-scene
-        vr-mode-ui="enabled: false"
-		embedded
-		arjs='sourceType: webcam; debugUIEnabled: false;'>
+    <a-scene vr-mode-ui="enabled: false"
+	embedded
+	arjs='sourceType: webcam; debugUIEnabled: false;'>
+	    
+	<a-entity id="cameraRig">
+		<a-entity id="head" camera wasd-controls look-controls cursor="rayOrigin: mouse" position="0 1.6 0"></a-entity>
+	</a-entity>
+	    
+	<a-assets>
+            <a-asset-item id="pisa" src="assets/pisa.gltf"></a-asset-item>
+        </a-assets>
+	    
+	<a-entity position="-5 -5 -50 ">
+            <a-entity src="assets/pisa.gltf" 
+                      gltf-model="#pisa" 
+                      scale="1 1 1" 
+                      class="click" 
+                      gps-entity-place="latitude: 43.716667; longitude: 10.400000;" text-show>
+                <a-entity class="clickable"
+                          position="5 10 30"
+                          rotation="0 30 0"
+                          text="color: #1a750c; font-type: bold; align: center; value: This is the leaning tower of Pisa; width: 9; heigh: 9; letterSpacing: 10;"
+                          visible="false"></a-entity>
+            </a-entity>
+        </a-entity>
 
-        <a-box
-            material="color: red;"
-            scale="20 20 20"
-            gps-entity-place="latitude: 44.506477; longitude: 11.301524;">
-        </a-box>
-
+       
         <a-camera
-            rotation-reader
-            gps-camera="simulateLatitude: 44.504348; simulateLongitude: 11.301027; minDistance: 1; maxDistance: 700;"
-        >
-		</a-camera>
+            rotation-reader gps-camera="simulateLatitude: 44.504348; simulateLongitude: 11.301027; minDistance: 1; maxDistance: 700;">
+	</a-camera>
+	    
 	</a-scene>
 </body>
 
