@@ -53,8 +53,12 @@
 Τα ανέβασα στον φάκελο <a href="https://github.com/dpsd19044/Augmented-Reality/tree/main/location_based/assets/magnemite/textures">assets/magnemite/textures</a> και μετά τα σύνδεσα με τον κώδικα. <br>
 Βρήκα τις συντεταγμένες του μνημείου στο <a href="https://www.latlong.net/">latlong</a> και τις τοποθέτησα στο gps-entity-place και στο gps-camera. <br>
 Μετά ασχολήθηκα με την παρουσίαση του 3d μοντέλου και τον γραμμάτων στον χώρο. <br>
-Αντιμετώπισα μερικά θέματα με τον κώδικα γιατί δεν διάβαζε το μοντέλο, παρατηρώντας και αλλους κώδικες κατάφερα να τα εμφανήσω, έχοντας αυτό το αποτέλεσμα. <br>
-<img src="img_chania.jpg"
+Αντιμετώπισα μερικά θέματα με τον κώδικα γιατί δεν διάβαζε το μοντέλο, παρατηρώντας και αλλους κώδικες κατάφερα να τα εμφανήσω. <br>
+
+
+Για το δεύτερο τμήμα της εργασίας κατέβασα μια φωτογραφία <a href="https://www.google.com/search?q=%CE%A0%CE%BB%CE%B1%CF%84%CE%B5%CE%B9%CE%B1+%CE%B7%CF%81%CF%89%CF%89%CE%BD+%CF%83%CF%85%CF%81%CE%BF%CF%82&rlz=1C1CHZN_enGR950GR950&sxsrf=ALiCzsZCzgojyV6hD0s2rDD-zrEu50zYrw:1654206908528&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjJr6v54I_4AhW057sIHeIGBU8Q_AUoAnoECAEQBA&biw=958&bih=967&dpr=1#imgrc=dc7Cggff3utveMτης">πλατείας Ηρώων</a>  από το Google. <br>
+Βρήκα τις συντετγμένες της απο το ίδιο σαιτ.
+
 
 # Conclusions
 
