@@ -48,8 +48,13 @@
 
 Βέβαια δεν έχω καταφέρει να δώ τι εμφανίζει η κάμερα όταν διαβάζει τα markers ( εκει είναι που το έχασα πάλι και για αυτό συμβουλεύτηκα και άλλες εργασίες φοιτητών μου. Και τελικά δεν κατάφερα να λύσω το προβληματάκι μου ... ).
 
-# 3rd Deliverable 
-
+# 3rd Deliverable
+Για το πρώτο τμήμα της εργασίας δλδ το <a href="https://github.com/dpsd19044/Augmented-Reality/blob/main/location_based/index.html">index.html</a> βρήκα το 3D μοντέλο μου στο <a href="https://sketchfab.com/3d-models/berlin-wall-fragment-at-tembusu-college-2-of-2-c4cee72d86514cc7a80724827f5921a1">sketchfab</a> και κατέβασα όλα τα προτεινόμενα αρχεία του. <br>
+Τα ανέβασα στον φάκελο <a href="https://github.com/dpsd19044/Augmented-Reality/tree/main/location_based/assets/magnemite/textures">assets/magnemite/textures</a> και μετά τα σύνδεσα με τον κώδικα. <br>
+Βρήκα τις συντεταγμένες του μνημείου στο <a href="https://www.latlong.net/">latlong</a> και τις τοποθέτησα στο gps-entity-place και στο gps-camera. <br>
+Μετά ασχολήθηκα με την παρουσίαση του 3d μοντέλου και τον γραμμάτων στον χώρο. <br>
+Αντιμετώπισα μερικά θέματα με τον κώδικα γιατί δεν διάβαζε το μοντέλο, παρατηρώντας και αλλους κώδικες κατάφερα να τα εμφανήσω, έχοντας αυτό το αποτέλεσμα. <br>
+<img src="img_chania.jpg"
 
 # Conclusions
 
